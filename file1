@@ -1,5 +1,52 @@
-file 1
-1111
+touch 4313.jpg
+touch Viking-1-Orbiter-Tharsis-Mars-Volcano-PIA00408.jpg
+touch barb.txt
+touch hubble_ultra_deep_field_2560x1440.jpg
 
-file new_feature
-file new_feature 22
+sort --help
+
+chmod u+x question21.bash
+chmod u+x find_first_n.bash
+mkdir -p dir11/dir11_2/dir11_3/dir11_4
+cat filename
+head -n 2 filename
+tail -n 2 filename
+diff file1 file2
+sort filename
+grep "thing to search for" filename
+ls -l / | tail -n1
+ls -ld */ | head -n1
+head -n 2 file
+ls */ | head
+find . -maxdepth 3 -type f
+cat $(find . -maxdepth 3 -type f | head -n1)
+cat `find . -maxdepth 3 -type f | head -n1`
+find . -maxdepth 3 -type f | head -n1
+
+head -n2 $(find . -maxdepth 3 -type f)
+
+# Find all directories named src
+find . -name src -type d
+
+# Find all python files that have a folder named test in their path
+find . -path '*/test/*.py' -type f
+
+# Find all files modified in the last day
+find . -mtime -1
+# Find all zip files with size in range 500k to 10M
+find . -size +500k -size -10M -name '*.tar.gz'
+# Delete all files with .tmp extension
+find . -name '*.tmp' -exec rm {} \;
+# Find all PNG files and convert them to JPG
+find . -name '*.png' -exec convert {} {}.jpg \;
+
+Finding content in files
+The grep command searches file contents.
+
+It takes 2 arguments; the name/path of the file to copy, and the name/path of the destination:
+
+user@system:~$ grep "thing to search for" path/to/file
+This is the thing to search for in this file
+Use the -R flag to search recursively (all subfolders and their files)
+
+
